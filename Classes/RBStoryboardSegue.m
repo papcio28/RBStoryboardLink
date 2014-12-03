@@ -24,6 +24,7 @@
 
 #import "RBStoryboardSegue.h"
 #import "RBStoryboardLink.h"
+#import <Typhoon/Typhoon.h>
 
 
 @implementation RBStoryboardSegue
@@ -40,7 +41,13 @@
     NSAssert(storyboardName, @"Unable to load linked storyboard. RBStoryboardLink storyboardName is nil. Forgot to set attribute in interface builder?");
     
     // Creates new destination.
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle bundleWithIdentifier:storyboardBundleIdentifier]];
+    UIStoryboard* storyboard;
+    if([link.storyboard isKindOfClass:[TyphoonStoryboard class]]) {
+        TyphoonStoryboard* selfStoryboard = (TyphoonStoryboard*)link.storyboard;
+        storyboard = [TyphoonStoryboard storyboardWithName:storyboardName factory:selfStoryboard.factory bundle:[NSBundle bundleWithIdentifier:storyboardBundleIdentifier]];
+    } else {
+        storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle bundleWithIdentifier:storyboardBundleIdentifier]];
+    }
     
     if ([storyboardID length] == 0) {
         return [storyboard instantiateInitialViewController];
