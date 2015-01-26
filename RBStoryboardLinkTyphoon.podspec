@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author       = 'Pawel Urban'
   s.source       = {
       :git => 'https://github.com/papcio28/RBStoryboardLink.git',
-      :tag => s.version
+      :branch => 'master'
   }
   s.platform     = :ios, '7.0'
   s.source_files = 'Classes/*.{h,m}'
