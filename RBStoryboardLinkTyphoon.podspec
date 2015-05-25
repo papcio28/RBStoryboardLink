@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     :type => 'MIT',
     :file => 'LICENSE'
   }
-  s.dependency 'Typhoon', '~> 2.3.1'
+  s.dependency 'Typhoon'
   s.author       = 'Pawel Urban'
   s.source       = {
       :git => 'https://github.com/papcio28/RBStoryboardLink.git',
