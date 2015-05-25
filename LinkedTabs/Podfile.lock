@@ -1,9 +1,11 @@
 PODS:
-  - KIF (2.0.0)
-  - RBStoryboardLink (0.1.0)
+  - KIF (3.1.2):
+    - KIF/XCTest (= 3.1.2)
+  - KIF/XCTest (3.1.2)
+  - RBStoryboardLink (0.1.4)
 
 DEPENDENCIES:
-  - KIF (~> 2.0)
+  - KIF (~> 3.0)
   - RBStoryboardLink (from `../RBStoryboardLink.podspec`)
 
 EXTERNAL SOURCES:
@@ -11,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../RBStoryboardLink.podspec
 
 SPEC CHECKSUMS:
-  KIF: c01fb8fb593cf8ffeeb69ed8d402ce88143e0697
-  RBStoryboardLink: ab20204dad0e4752720abdee4cb317c67ea0afbc
+  KIF: 068074b24dd455025e7f2a488ba4fb07b9ce047b
+  RBStoryboardLink: 5635f1f5b6255b570ad76e0a4bba04be163f044e
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.35.0

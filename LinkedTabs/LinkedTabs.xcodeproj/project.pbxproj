@@ -44,8 +44,10 @@
 
 /* Begin PBXFileReference section */
 		08BF9F6069F34E9AB5B04CE1 /* libPods-UI Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UI Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B5A38DD5574473093FA4DBC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		410487624FE840E8A911ACEE /* Pods-UI Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.xcconfig"; path = "Pods/Pods-UI Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		3B4A18D125502AB96C6B5577 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3CC4FABC6BA92A81C64C2FB6 /* Pods-UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests.release.xcconfig"; sourceTree = "<group>"; };
+		900BEC419A8750F796F498E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A3CDF8568D89A7FB06817E6B /* Pods-UI Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3BD9E3A092444D6A573868B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C885FD17E53AA200309733 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E1EBCA1815851A8500892759 /* LinkedTabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkedTabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81CEE11C6AD155808D5B14B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				900BEC419A8750F796F498E5 /* Pods.debug.xcconfig */,
+				3B4A18D125502AB96C6B5577 /* Pods.release.xcconfig */,
+				A3CDF8568D89A7FB06817E6B /* Pods-UI Tests.debug.xcconfig */,
+				3CC4FABC6BA92A81C64C2FB6 /* Pods-UI Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E1EBCA0D15851A8500892759 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +125,7 @@
 				E1FBA029182EFEB000E3ECB8 /* UI Tests */,
 				E1EBCA1B15851A8500892759 /* Frameworks */,
 				E1EBCA1915851A8500892759 /* Products */,
-				2B5A38DD5574473093FA4DBC /* Pods.xcconfig */,
-				410487624FE840E8A911ACEE /* Pods-UI Tests.xcconfig */,
+				81CEE11C6AD155808D5B14B8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LT;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Robert Brown";
 				TargetAttributes = {
 					E1FBA023182EFEB000E3ECB8 = {
@@ -337,7 +349,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-UI Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		78CDF0FCA8FA4EDDBBC96341 /* Check Pods Manifest.lock */ = {
@@ -367,7 +379,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -440,9 +452,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -452,6 +466,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -473,11 +488,14 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -492,7 +510,7 @@
 		};
 		E1EBCA5715851A8600892759 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B5A38DD5574473093FA4DBC /* Pods.xcconfig */;
+			baseConfigurationReference = 900BEC419A8750F796F498E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LinkedTabs/LinkedTabs-Prefix.pch";
@@ -504,7 +522,7 @@
 		};
 		E1EBCA5815851A8600892759 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B5A38DD5574473093FA4DBC /* Pods.xcconfig */;
+			baseConfigurationReference = 3B4A18D125502AB96C6B5577 /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LinkedTabs/LinkedTabs-Prefix.pch";
@@ -516,9 +534,8 @@
 		};
 		E1FBA034182EFEB000E3ECB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 410487624FE840E8A911ACEE /* Pods-UI Tests.xcconfig */;
+			baseConfigurationReference = A3CDF8568D89A7FB06817E6B /* Pods-UI Tests.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LinkedTabs.app/LinkedTabs";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -548,9 +565,8 @@
 		};
 		E1FBA035182EFEB000E3ECB8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 410487624FE840E8A911ACEE /* Pods-UI Tests.xcconfig */;
+			baseConfigurationReference = 3CC4FABC6BA92A81C64C2FB6 /* Pods-UI Tests.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LinkedTabs.app/LinkedTabs";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

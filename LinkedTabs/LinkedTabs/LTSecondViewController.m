@@ -2,7 +2,7 @@
 // LTSecondViewController.m
 // LinkedTabs
 //
-// Copyright (c) 2012-2014 Robert Brown
+// Copyright (c) 2012-2015 Robert Brown
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -44,7 +44,7 @@
     self.badgeNumber++;
     
     // TODO: Fix this so the tab bar can be accessed more directly.
-    [[[[self parentViewController] parentViewController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%u", self.badgeNumber]];
+    [[[[self parentViewController] parentViewController] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%@", @(self.badgeNumber)]];
 }
 
 @end

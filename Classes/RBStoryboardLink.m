@@ -1,7 +1,7 @@
 //
 // RBStoryboardLink.m
 //
-// Copyright (c) 2012-2014 Robert Brown
+// Copyright (c) 2012-2015 Robert Brown
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -167,7 +167,7 @@
     self.transitioningDelegate = scene.transitioningDelegate;
 }
 
-- (NSString *)vertialConstraintString {
+- (NSString *)verticalConstraintString {
 
     // Defaults to using top and bottom layout guides.
     BOOL needsTopLayoutGuide    = self.needsTopLayoutGuide;
@@ -217,7 +217,7 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[self vertialConstraintString]
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[self verticalConstraintString]
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];
